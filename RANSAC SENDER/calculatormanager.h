@@ -6,12 +6,12 @@
 
 #include "calculator.h"
 
-class CalculatorManager : public QObject
-{
+class CalculatorManager : public QObject {
     Q_OBJECT
 public:
-//    explicit CalculatorManager(QObject *parent = nullptr);
-    CalculatorManager(const QVector<double> &x, const QVector<double> &y, const double &eps, const int &iterations, const bool &parallelFlag);
+    CalculatorManager(const QVector<double> &x, const QVector<double> &y, const double &eps, const int &iterations,
+                      const bool &parallelFlag);
+
     const Answer &answer() const;
 
 public slots:

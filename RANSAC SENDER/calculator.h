@@ -9,7 +9,7 @@
 #include <QRunnable>
 
 
-struct Answer{
+struct Answer {
     double k;
     double b;
     int max;
@@ -18,11 +18,11 @@ struct Answer{
     Answer() : k(0), b(0), max(-1), eps(0) {}
 };
 
-class Calculator: public QObject, public QRunnable
-{
+class Calculator : public QObject, public QRunnable {
     Q_OBJECT
 public:
     Calculator(const QVector<double> &x, const QVector<double> &y, const double &eps, const int &iterations = 1000);
+
     const Answer &answer() const;
 signals:
     void finish();
